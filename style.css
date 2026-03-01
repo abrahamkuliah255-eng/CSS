@@ -1,6 +1,76 @@
-body {
+
+* {
     margin: 0;
     padding: 0;
-    background-color: #f5f5dc; /* Warna cream */
+    box-sizing: border-box;
+}
+
+body {
     height: 100vh;
+    background-color: #f5f5dc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+/* Judul lebih menarik */
+.judul {
+    font-size: 48px;
+    font-weight: bold;
+    background: linear-gradient(to right, purple, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+    animation: fadeIn 1.2s ease-in-out;
+    position: relative;
+}
+
+/* Garis dekorasi */
+.judul::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: purple;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.btn-masuk {
+    background-color: purple;
+    color: white;
+    padding: 18px 45px;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-masuk:hover {
+    background-color: #6a0dad;
+    transform: scale(1.08);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
