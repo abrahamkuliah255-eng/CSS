@@ -7,22 +7,25 @@
 </head>
 <body>
 
+    <!-- NAVBAR -->
     <nav class="navbar">
         <div class="logo">Store Halla</div>
         <ul class="nav-links">
             <li><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#">About</a></li>
             <li><a href="#">Kontak</a></li>
         </ul>
     </nav>
 
+    <!-- KONTEN UTAMA -->
     <div class="container">
         <h1 class="judul">Selamat Datang</h1>
         <p>Silahkan login terlebih dahulu</p>
         <button class="btn-masuk">Masuk</button>
     </div>
 
-    <footer class="about hidden" id="about">
+    <!-- ABOUT SECTION -->
+    <footer class="about">
         <h2>About This Store</h2>
         <p>
             Store Halla adalah toko digital yang dikelola oleh mahasiswa 
@@ -36,22 +39,5 @@
         </p>
     </footer>
 
-    <script>
-        const about = document.querySelector(".about");
-
-        function revealOnScroll() {
-            const triggerBottom = window.innerHeight * 0.85;
-            const aboutTop = about.getBoundingClientRect().top;
-
-            if (aboutTop < triggerBottom) {
-                about.classList.add("show");
-            }
-        }
-
-        window.addEventListener("scroll", revealOnScroll);
-    </script>
-
 </body>
 </html>
-
-
