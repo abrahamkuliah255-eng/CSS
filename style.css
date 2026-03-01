@@ -6,19 +6,48 @@
 }
 
 body {
-    height: 100vh;
     background-color: #f5f5dc;
+    font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    background-color: purple;
+    color: white;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    font-family: 'Poppins', sans-serif;
+    padding: 15px 50px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
 }
 
 .container {
+    flex: 1; /* Biar isi di tengah */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    padding: 40px 20px;
 }
 
-/* Judul lebih menarik */
 .judul {
     font-size: 48px;
     font-weight: bold;
@@ -26,22 +55,9 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 10px;
-    animation: fadeIn 1.2s ease-in-out;
-    position: relative;
 }
 
-/* Garis dekorasi */
-.judul::after {
-    content: "";
-    width: 80px;
-    height: 4px;
-    background: purple;
-    display: block;
-    margin: 10px auto 0;
-    border-radius: 5px;
-}
-
-p {
+.container p {
     font-size: 18px;
     margin-bottom: 30px;
     color: #555;
@@ -64,11 +80,31 @@ p {
     transform: scale(1.08);
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
+.about {
+    background-color: purple;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+
+    /* Animasi slide up */
+    opacity: 0;
+    transform: translateY(40px);
+    animation: slideUp 1s ease forwards;
+    animation-delay: 0.3s;
+}
+
+.about h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.about p {
+    max-width: 700px;
+    margin: 10px auto;
+    line-height: 1.6;
+}
+
+@keyframes slideUp {
     to {
         opacity: 1;
         transform: translateY(0);

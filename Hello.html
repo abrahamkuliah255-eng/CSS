@@ -2,10 +2,19 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Login Page</title>
+    <title>Store Halla</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <nav class="navbar">
+        <div class="logo">Store Halla</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#">Kontak</a></li>
+        </ul>
+    </nav>
 
     <div class="container">
         <h1 class="judul">Selamat Datang</h1>
@@ -13,5 +22,36 @@
         <button class="btn-masuk">Masuk</button>
     </div>
 
+    <footer class="about hidden" id="about">
+        <h2>About This Store</h2>
+        <p>
+            Store Halla adalah toko digital yang dikelola oleh mahasiswa 
+            Universitas Sanata Dharma. Kami berfokus pada penjualan currency 
+            dalam berbagai game online dengan layanan yang cepat, aman, 
+            dan terpercaya.
+        </p>
+        <p>
+            Kepuasan pelanggan adalah prioritas utama kami. 
+            Terima kasih telah mempercayakan kebutuhan top-up game Anda kepada kami.
+        </p>
+    </footer>
+
+    <script>
+        const about = document.querySelector(".about");
+
+        function revealOnScroll() {
+            const triggerBottom = window.innerHeight * 0.85;
+            const aboutTop = about.getBoundingClientRect().top;
+
+            if (aboutTop < triggerBottom) {
+                about.classList.add("show");
+            }
+        }
+
+        window.addEventListener("scroll", revealOnScroll);
+    </script>
+
 </body>
 </html>
+
+
