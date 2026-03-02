@@ -1,26 +1,25 @@
-/* ========================= */
-/* RESET */
-/* ========================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ========================= */
-/* BODY */
-/* ========================= */
 body {
-    background-color: #f5f5dc;
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background: url("https://images.gamebanana.com/img/ss/mods/6341be040db90.jpg") no-repeat center center/cover;
 }
 
-/* ========================= */
-/* NAVBAR (GRADIENT) */
-/* ========================= */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
 .navbar {
     background: linear-gradient(90deg, #6a0dad, #a855f7);
     color: white;
@@ -51,9 +50,6 @@ body {
     opacity: 0.8;
 }
 
-/* ========================= */
-/* CONTAINER */
-/* ========================= */
 .container {
     flex: 1;
     display: flex;
@@ -62,30 +58,23 @@ body {
     align-items: center;
     text-align: center;
     padding: 40px 20px;
+    color: white;
 }
 
-/* ========================= */
-/* JUDUL */
-/* ========================= */
 .judul {
     font-size: 48px;
     font-weight: bold;
-    background: linear-gradient(to right, #6a0dad, #a855f7);
+    background: linear-gradient(to right, #ffffff, #d8b4fe);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 10px;
 }
 
-/* SUBTEXT */
-.container p {
+.subtext {
     font-size: 18px;
     margin-bottom: 30px;
-    color: #555;
 }
 
-/* ========================= */
-/* TOMBOL 3D */
-/* ========================= */
 .btn-masuk {
     background: linear-gradient(to bottom, #a855f7, #6a0dad);
     color: white;
@@ -96,33 +85,28 @@ body {
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.2s ease;
-
-    box-shadow: 0 6px 0 #4b007a, 0 8px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 0 #4b007a, 0 8px 15px rgba(0, 0, 0, 0.4);
 }
 
 .btn-masuk:hover {
     transform: translateY(-3px);
-    box-shadow: 0 9px 0 #4b007a, 0 12px 20px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 9px 0 #4b007a, 0 12px 20px rgba(0, 0, 0, 0.5);
 }
 
 .btn-masuk:active {
     transform: translateY(4px);
-    box-shadow: 0 2px 0 #4b007a, 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 0 #4b007a, 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
-/* ========================= */
-/* ABOUT SECTION (GRADIENT) */
-/* ========================= */
 .about {
     background: linear-gradient(90deg, #6a0dad, #a855f7);
     color: white;
     text-align: center;
     padding: 40px 20px;
-
     opacity: 0;
     transform: translateY(40px);
     animation: slideUp 1s ease forwards;
-    animation-delay: 0.3s;
+    animation-delay: 0.5s;
 }
 
 .about h2 {
@@ -136,9 +120,6 @@ body {
     line-height: 1.6;
 }
 
-/* ========================= */
-/* ANIMASI */
-/* ========================= */
 @keyframes slideUp {
     to {
         opacity: 1;
